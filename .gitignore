@@ -1,0 +1,4 @@
+flake.lock
+
+# MacOS files
+.DS_Store
