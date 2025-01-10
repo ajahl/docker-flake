@@ -26,7 +26,7 @@
           # Function to stop Colima
           stop_colima() {
             echo "Stopping Colima..."
-            colima stop
+            colima delete
           }
 
           # Set up to stop Colima on shell exit
