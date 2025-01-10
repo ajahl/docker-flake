@@ -18,8 +18,9 @@
         ];
 
         shellHook = ''
-          echo "Setting up docker environment"
-          colima start
+          WORKSPACE_PATH="$PWD"
+          echo "Setting up docker environment in $WORKSPACE_PATH"
+          colima start --mount "$WORKSPACE_PATH"
           docker --version
           # lazydocker
 
