@@ -22,7 +22,7 @@
             export WORKSPACE_PATH="$PWD"
           fi
           echo "Setting up docker environment in $WORKSPACE_PATH"
-          colima start --mount "$WORKSPACE_PATH"
+          colima start --mount "$WORKSPACE_PATH" --mount "$PWD"
           docker --version
           # lazydocker
 
