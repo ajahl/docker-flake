@@ -21,8 +21,8 @@
           if [ -z "$WORKSPACE_PATH" ]; then
             export WORKSPACE_PATH="$PWD"
           fi
-          echo "Setting up docker environment in $WORKSPACE_PATH"
-          colima start --mount "$WORKSPACE_PATH" --mount "$PWD"
+          echo "Setting up docker environment in $PWD with workspace $WORKSPACE_PATH"
+          colima start --mount "$WORKSPACE_PATH:w" --mount "$PWD:w"
           docker --version
           # lazydocker
 
